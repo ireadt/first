@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style type="text/css">
+
+    p[id^=a]{
+        color: blue;
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 25px;
+        background: rgb(27, 221, 235);
+    }
+
+    p[id$=x]{
+        color: rgb(219, 105, 29);
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 25px;
+        background: rgb(79, 226, 207);
+    }
+
+
+    p[id*=z1]{
+        color: rgb(219, 105, 29);
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 25px;
+        background: rgb(79, 226, 207);
+    }
+
+
+    #aa+#bb{
+        color: rgb(29, 219, 162);
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 25px;
+        background: rgb(170, 49, 160);
+    }
+
+    h1>strong{
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 25px;
+        background: rgb(170, 49, 160); 
+    }
+
+    .a-4 p~h2{ 
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 25px;
+        background: rgb(170, 49, 160); 
+    }
+
+    hr{
+        color: indianred;
+        height: 5px;
+    }
+
+
+</style>
+</head>
+<body>
+    <p id="a">hiahiahia</p>
+    <p id="b">hehehehehe</p>
+    <p id="a1">xlxlxlxl</p>
+    <p id="b1">ksisiski</p>
+    <hr>
+    <p id="x">kyshxd</p>
+    <p id="y">kxxxxx</p>
+    <p id="1x">hhhh11</p>
+    <p id="1y">aaaasd</p>
+    <hr>
+    <p id="cs1">5465465</p>
+    <p id="dz1">qweqwe</p>
+    <p id="ez1">rqweq</p>
+    <p id="fz1">asxsaq</p>
+    <hr>
+    <h2 id="bb">4444444</h2>
+    <h2 id="bb">33333333</h2>
+    <p id="aa">111111111</p>
+    <h2 id="bb">222222222</h2>
+    <hr>
+    <h1>zzzxx <strong>xxxx</strong>xxx<strong>asdasd</strong></h1>
+    <h1>haha<em>ksa<strong>zxczc</strong></em>xxxxxx</h1>
+    <hr>
+<div class="a-4">
+    <p>你站在桥上看风景</p>
+    <h2>明月装饰了你的窗子</h2>
+    <h2>看风景的人在楼上看你</h2>
+    <h2>你装饰了别人的梦</h2>
+</div>
+<hr>
+</html>
