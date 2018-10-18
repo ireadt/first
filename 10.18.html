@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="style07.css" type="text/css">
+</head>
+<body>
+        <div class="bg">
+            <form action="#" method="get" autocomplete="off">
+            <h2>信息登记表</h2>
+            <p><span>用户登录名: </span><input type="text" name="user_name" value="201701001@163.com" disabled readonly />（不能修改，只能查看）</p>
+            <p><span>真实姓名：</span><input type="text" name="real_name"  pattern="^[\u4e00-\u9fa5]{1,7}$|^[\dA-Za-z_]{1,14}$" placeholder="例如：王明" required autofocus/>（必须填写，只能输入汉字）</p>
+            <p><span>真实年龄：</span><input type="number" name="real_lage" value="24" min="12" max="100" required/>（必须填写）</p>
+            <p><span>出生日期：</span><input type="date" name="birthday" value="1990-10-1" required/>（必须填写）</p>
+            <p><span>电子邮箱：</span><input type="email" name="myemail" placeholder="201701001@163.com" required multiple/>（必须填写）</p>
+            <p><span>身份证号：</span><input type="text" name="card" required pattern="^([0-9]){7,18}(x|X)?$"/>（必须填写，能够以数字、字母x结尾的短身份证号）</p>
+            <p><span>手机号码：</span><input type="tel" name="telphone" pattern="^(13[0-9]|14[5|7]|15[0|1|2|3|5|6|7|8|9]|18[0|1|2|3|5|6|7|8|9])\d{8}$" required/>（必须填写）</p>
+            <p><span>个人主页：</span><input type="url" name="myurl" list="urllist" placeholder="#" pattern="^http://([\w-|0-9]+\.)+[\w-|0-9]+(/[\w-|0-9./?%&=]*)?$"/>（请选择网址） 
+              <datalist id="urllist">
+              <option>#</option>
+              <option>#</option>
+              <option>#</option>
+              </datalist>
+            </p>
+            <p class="lucky"><span>幸运颜色：</span><input type="color" name="color1" value="#00FFFF"/>（请选择颜色）</p>
+            <p class="btn">
+            <input type="submit" value="提交"/>
+            <input type="reset" value="重置"/>
+            </p>
+            </form>
+        </div>
+</body>
+</html>
