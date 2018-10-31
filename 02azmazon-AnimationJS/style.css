@@ -180,7 +180,7 @@ img{
     bottom: 0;
     display: flex;
     z-index: 5;
-    transition: height 0.3s linear 0s;
+    transition: height 0.1s linear 0s;
     /* opacity: 0.3; */
     /* background-color: rgb(90, 90, 90) */
 }
@@ -190,21 +190,28 @@ img{
 }
 
 
-.tag li{
+.txtItem{
     width: 12.5%;
-    background-color:rgba(105, 103, 103, 0.5);
     margin-right:2px;
     color: rgb(253, 252, 251);
     text-align: center; 
 }
 
 
-.tag li:hover{
+.txtItem:hover{
     background-color: rgba(255, 143, 14, 0.8)
 }
 
-.tag li:last-child{
+.txtItem:last-child{
     margin: 0;
+}
+
+.txtItem:hover,.heighlightColor{
+    background-color: rgb(233, 177, 21)
+}
+
+.normalColor{
+    background-color: rgba(29, 28, 28,0.5)
 }
 
 

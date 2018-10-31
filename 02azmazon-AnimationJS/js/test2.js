@@ -16,7 +16,9 @@
 
 //获取一组带图像的超链接
 var imagesA=document.getElementById("images").children;
-console.log(imagesA);
+
+//获取一组li文本
+var txtList=document.querySelectorAll(".txtItem");
 
 //行内样式实现换显示样式
 //26行元素隐藏
@@ -36,10 +38,11 @@ console.log(imagesA);
 var currentNo=0;
 function changeImg(){
     //排他原理,先去掉同类，再突出自己
-
+    var nodeLenght=txtList.length
     for(var i=0;i<imagesA.length;i++){
         imagesA[i].className='hiddenImg';
-        console.log(imagesA[i]);
+        //console.log(imagesA[i]);
+        txtList[i].className='txtItem normalColor'
     }
 
     //或者
@@ -49,6 +52,7 @@ function changeImg(){
 
     //再突出自己
     imagesA[currentNo].className="displayImg";
+    txtList[currentNo].className="txtItem normalColor";
     //换个元素，为下一次计时器调用做准备
     if(currentNo<7) {currentNo++;}
     else{
@@ -56,6 +60,7 @@ function changeImg(){
     }
     //console.log(currentNo);
 }
+
 var timer=window.setInterval(changeImg,1000)
 
 //鼠标移出后移出定时器
@@ -66,8 +71,48 @@ function stopChange(){
 function startChange(){
  timer = window.clearInterval(changeImg,1000);
 }
-//获取div以注册移入移出事件
-var imagesDiv=document.getElementById("images");
+//获取sliderDiv以注册移入移出事件
+var sliderDiv=document.getElementById("images");
 //为图像添加移入移出事件
-imagesDiv.addEventListener('mouseover',stopChange);
-imagesDiv.addEventListener('mouseout',startChange);
+sliderDiv.addEventListener('mouseover',stopChange);
+sliderDiv.addEventListener('mouseout',startChange);
+
+
+//为所有文本Li注册鼠标移入事件
+for(var i=0;i<txtList.length;i++){
+    txtList[i].addEventListener('mouseover',gotoImg);
+    //添加自定义属性no 记录当前li的编号
+    txtList[i].no=i;
+    //console.log(txtList[i].no);
+}
+//移入后，当前li高亮，跳转到对应图片
+function gotoImg(){
+    //获得当前显示图像的编号/文本编号 this 是当前事件发生的本体
+    //console.log(this.no);
+    currentNo=this.no;
+    changeImg();    
+}
+
+var leftButton=document.querySelector(".leftButton");
+var rightButton=document.querySelector(".rightButton");
+leftButton.addEventListener('click',leftImg);
+rightButton.addEventListener('click',rightImg);
+
+function feftImg(){
+    if(currentNo>0) {currentNo--;}
+    else{
+        currentNo=6;
+    }
+    changeImg();
+}
+
+function rightImg(){
+    if(currentNo<7) {currentNo++;}
+    else{
+        currentNo=0;
+    }
+}
+
+//----------------------------------
+
+
