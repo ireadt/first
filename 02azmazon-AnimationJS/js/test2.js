@@ -74,7 +74,13 @@ function startChange(){
 //获取sliderDiv以注册移入移出事件
 var sliderDiv=document.getElementById("images");
 //为图像添加移入移出事件
+
+
 sliderDiv.addEventListener('mouseover',stopChange);
+sliderDiv.addEventListener('mouseover',function(){window.clearInterval(timer);});
+
+
+sliderDiv.addEventListener('mouseover',()=>{clearInterval(timer);});
 sliderDiv.addEventListener('mouseout',startChange);
 
 
@@ -98,10 +104,10 @@ var rightButton=document.querySelector(".rightButton");
 leftButton.addEventListener('click',leftImg);
 rightButton.addEventListener('click',rightImg);
 
-function feftImg(){
+function leftImg(){
     if(currentNo>0) {currentNo--;}
     else{
-        currentNo=6;
+        currentNo=7;
     }
     changeImg();
 }
