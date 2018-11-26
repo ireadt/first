@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script src="./shoppingcart.js"></script>
+
+<script>
+    //创建一个购物车
+    var cart=new ShoppingCart();
+    cart.clearCart();
+//创建一个商品
+var p=new Product("01","鼠标","#",100.5);
+//创建一个订单
+var order=new Order(p,2,true);
+//将订单order放入购物车（本地存储）
+cart.addToCart(order);
+
+// var cartData=new CartData();
+// cartData.orderList.push(order);
+// cartData.totalQty=order.qty;
+// cartData.totalAmount=order.qty*order.price;
+// cartData.units=1;
+
+
+p=new Product("02","键盘","#",310.5);
+order=new Order(p,5,true);
+cart.addToCart(order);
+
+p=new Product("03","耳机","#",310.5);
+order=new Order(p,2,false);
+cart.addToCart(order);
+
+// cart.setDataToLocalStorage(cartData);
+// console.log(cart.getDataFromLocalStorage()); 
+// cart.addToCart(order);
+// var cartData=new CartData();
+
+console.log(cart.getSelectedQty());
+
+console.log(cart.getSelectedAmount());
+cart.setItemSelectStatus('03',true);
+</script>
+</body>
+</html>
