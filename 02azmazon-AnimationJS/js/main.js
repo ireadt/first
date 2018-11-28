@@ -19,13 +19,6 @@ var galleryInfo = {
 }
 
 
-
-
-
-
-
-
-
 var imgItems = document.getElementById("imgItems");
 var ixtItems = document.getElementById("txtItems");
 var imgs = imgItems.getElementsByTagName("img");

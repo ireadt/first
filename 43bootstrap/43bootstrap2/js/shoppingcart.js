@@ -81,11 +81,10 @@ class ShoppingCart {
 
     getSelectedQty() {
         let selectedQty = 0;
-        let selectArray = this.getSelectedList();
-        for (const key in selectArray) {
-            if (selectArray.hasOwnProperty(key)) {
-                const element = selectArray[key];
-                selectedQty += element.qty;
+        let cartData = this.getDataFromLocalStorage();
+        for (let i=0;i<cartData.orderList.length;i++) {
+            if (cartData.orderList[i].selectStatus) {
+                selectedQty+=cartData.orderList[i].qty;
             }
         }
         return selectedQty;
@@ -93,11 +92,10 @@ class ShoppingCart {
 
     getSelectedAmount() {
         let selectedAmount = 0;
-        let selectArray = this.getSelectedList();
-        for (const key in selectArray) {
-            if (selectArray.hasOwnProperty(key)) {
-                const element = selectArray[key];
-                selectedAmount += element.qty * element.price;
+        let cartData = this.getDataFromLocalStorage();
+        for (let i=0;i<cartData.orderList.length;i++) {
+            if (cartData.orderList[i].selectStatus) {
+                selectedAmount+=cartData.orderList[i].unitPrice*cartData.orderList[i].qty;
             }
         }
         return selectedAmount;
