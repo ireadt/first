@@ -12,27 +12,6 @@ function getshoppingCart(){
 }
 getshoppingCart();
 
-// var cart = new ShoppingCart();
-// var cartRoot = document.querySelector('#cartRoot');
-// const dataNameJson = {
-    // "price": "[data-name='price']",
-    // "qty": "[data-name='qty']",
-    // "imgSrc": '[data-name="imgSrc"]',
-    // "subPrice": '[data-name="subPrice"]',
-    // "selectedQty": '[data-name="selectedQty"]',
-    // "selectedAmount": '[data-name="selectedAmount"]',
-    // "units": '[data-name="units"]'
-// };
-// 
-// const operatorNameJson = {
-    // "checkItem": "[data-operator='checkItem']",
-    // "increase": "[data-operator='increase']",
-    // "decrease": "[data-operator='decrease']",
-    // "deleteItem": "[data-operator='deleteItem']"
-// };
-// console.log(cart);
-
-
 function displayOrderList(){
     let cartData=cart.getDataFromLocalStorage();
     let orderList=cartData.orderList;
@@ -74,21 +53,67 @@ function displayOrderList(){
         node.classList.remove('d-none');
     }
 }
-displayOrderList();
 
 
 function displaySelectedTotal() {
     //获取总数相关节点,并设置对应值
+    let cartData=cart.getDataFromLocalStorage();
     
-    // let totalNode = cartRoot.querySelector(dataNameJson.units);
-    // totalNode.textContent = cart.getTotalUnits();
-// 
-    // totalNode = cartRoot.querySelector(dataNameJson.selectedQty);
-    // totalNode.textContent = cart.getSelectedQty();
-// 
-    // totalNode = cartRoot.querySelector(dataNameJson.selectedAmount);
-    // totalNode.textContent = (cart.getSelectedAmount()).toFixed(2);
+    let units = document.querySelector('[data-name="units"]');
+    units.textContent = cartData.units;
+
+    let selectedQty = document.querySelector('[data-name="selectedQty"]');
+    selectedQty.textContent = cart.getselectedQty();
+
+    SelectedAmount = document.querySelector('[data-name="SelectedAmount"]');
+    SelectedAmount.textContent = (cart.getSelectedAmount()).toFixed(2);
 
 }
-displaySelectedTotal();
 
+function regEvent(){
+    let element=document.querySelector('[data-operator="clearAll"]');
+    console.log(element);
+
+    element.onclick=clearAllEventFun;
+
+    element=document.querySelectorAll('[data-operator="deleteItem"]');
+    console.log(element);
+    for(const i in element){
+        element[i].onclick=deleteItemEventFun;
+    }
+}
+
+function clearAllEventFun(){
+    cart.clearShoppingCart();
+    let cartListNode=document.querySelector('#cartList');
+
+    let exmapleNode=(document.querySelector('#orderExample')).cloneNode(true);
+    
+    cartListNode.innerHTML = "";
+    cartListNode.appendChild(exmapleNode);
+    displaySelectedTotal();
+}
+
+function deleteItemEventFun(){
+    console.log("删除");
+
+
+    let cartListNode=document.querySelector('#cartList');
+
+    console.log(cartListNode.childNodes);
+
+
+    let bbb=this.parentNode;
+    console.log(bbb);
+    let qqq=bbb.id;
+    for(const i in cartListNode.childNodes){
+        if(i.id==qqq)
+        cartListNode.removeChild(cartListNode.childNodes[i]);
+    }
+}
+function init(){
+    displayOrderList();
+    displaySelectedTotal();
+    regEvent();
+}
+init();

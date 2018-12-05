@@ -1,0 +1,20 @@
+[
+    {
+        "id" : "01",
+        "title" : "面膜",
+        "imaSrc" : "01.jpg",
+        "price" : 9.5
+    },
+    {
+        "id" : "02",
+        "title" : "书",
+        "imaSrc" : "02.jpg",
+        "price" : 13
+    },
+    {
+        "id" : "03",
+        "title" : "书",
+        "imaSrc" : "03.jpg",
+        "price" : 19.6
+    }
+]
