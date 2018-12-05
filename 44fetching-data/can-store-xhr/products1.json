@@ -1,0 +1,20 @@
+[
+    {
+      "id" : "01",
+      "price" : 2333.40,
+      "image" : "01.jpg",
+      "type" : "数码产品"
+    },
+    {
+        "name" : "电脑",
+        "price" : 5888.00,
+        "image" : "beans.jpg",
+        "type" : "数码产品"
+      },
+      {
+        "name" : "照相机",
+        "price" : 10800.88,
+        "image" : "beans.jpg",
+        "type" : "数码产品"
+      }
+]

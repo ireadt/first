@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="cn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+        <div class="test1"></div>
+        <div class="test2"></div>
+        <script>
+            // var textDiv = document.querySelector('.test1');
+            // console.log(textDiv);
+    
+            // var url = 'verse4.txt';
+            // // 1.0创建请求对象
+            // var ajax = new XMLHttpRequest();
+    
+            // // 2.0设置请求对象
+            // // 2.1用open() 方法来指定从网络请求资源的 HTTP request method , 以及URL。
+            // ajax.open('get', url);
+            // // 2.2设置响应类型 （返回什么类型的数据）
+            // ajax.responseType = 'text';
+            // // 2.3注册请求成功事件，事件发生后请求的响应数据response可用
+            // ajax.onreadystatechange = function () {
+            //     if (ajax.readyState == 4 && ajax.status == 200)
+    
+            //         textDiv.textContent = ajax.response;//ajax.response为响应数据
+            // };
+    
+            // // 3.0发送请求
+            // ajax.send();
+    
+            var textDiv2 = document.querySelector('.test2');
+            console.log(textDiv2);
+    
+            var url2 = 'can-store-xhr/products.json';
+            // 1.0创建请求对象
+            var ajax2 = new XMLHttpRequest();
+    
+            // 2.0设置请求对象
+            // 2.1用open() 方法来指定从网络请求资源的 HTTP request method , 以及URL。
+            ajax2.open('get', url2);
+            // 2.2设置响应类型 （返回什么类型的数据）
+            ajax2.responseType = 'json';
+            // 2.3注册请求成功事件，事件发生后请求的响应数据response可用
+            ajax2.onreadystatechange = function () {
+                if (ajax2.readyState == 4 && ajax2.status == 200)
+                    console.log(ajax2.response);//ajax2.response为
+                };
+                
+            // 3.0发送请求
+            ajax2.send();
+    
+        </script>
+    </body>
+
+
+    
+<!-- <body>
+    <div id="test">
+    </div>
+    <script>
+        var ajax=new XMLHttpRequest();
+        var url='verse4.txt';
+        ajax.open('get',url);
+        ajax.responseType='text';
+        ajax.onreadystatechange=function(){
+            if(ajax.readyState==4 && ajax.status==200){
+                let divNode=document.querySelector('#test');
+                divNode.textContent=ajax.response;
+            }
+        }
+        ajax.send();
+    </script>
+</body> -->
+</html>
