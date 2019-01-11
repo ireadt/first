@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>aa</title>
+    <style type="text/css">
+
+
+
+
+
+    .x{
+    margin: 50px auto 0;
+    position: relative;
+    z-index: 10;
+    height: 36px;
+    border-bottom: 3px solid #5f97e0;
+    text-align: left;
+    }
+
+    .x .y span{
+    position: relative;
+    bottom: -3px;
+    float: left;
+    height: 36px;
+    line-height: 30px;
+    color: #333;
+    margin-right: 30px;
+    cursor: pointer;
+    }
+
+    .x .y .a{
+    margin:-20px 0px;
+    position: absolute;
+    z-index: 9;
+    right: 0px;
+    top: -6px;
+    display: inline-block;
+    padding: 0 2px;
+    height: 22px;
+    line-height: 18px;
+    background-color: #ff9913;
+    color: #fff;
+    }
+    .x .b{
+        margin: 6px 0px;
+        position: absolute;
+            z-index: 1;
+            top: 17px;
+            right: 0;
+            display: inline-block;
+            border-width: 5px;
+            border-style: solid;
+            border-color:orange transparent transparent orange;
+    }
+    .x .y i {
+            position: absolute;
+            left: 50%;
+            margin-left: -6px;
+            bottom: 3px;
+            display: none;
+            border-bottom: 6px solid #3983e5;
+            border-top: 0 none;
+            border-left: 6px solid transparent;
+            border-right: 6px solid transparent;
+    }
+    .x .y .current,
+        .y span:hover {
+            color: #3983e5;
+        }
+
+        .x .y .current {
+            cursor: default;
+        }
+
+        .x .y .current i {
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <div class="x">
+        <h2 class="y">
+            <span class="current">热门<i></i><b class="a"><em>new</em><em class="b"></em></b></span>
+            <span>出境游<i></i></span>
+            <span>境内游<i></i></span>
+            <span>主题游<i></i></span>
+            <span>高端游<i></i></span>
+        </h2>
+    </div>
+</body>
+</html>

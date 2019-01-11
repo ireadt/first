@@ -1,0 +1,292 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.cl{
+    clear: both;
+}
+body{
+    font: 14px "Arial","微软雅黑","宋体"；
+}
+.innerCenter{
+    width: 1000px;
+    margin:0 auto;
+}
+.header{
+    height: 58px;
+    background-color: #191D3A;
+}
+.header .logo{
+    float: left;
+    height: 58px;
+    margin-left: 14px;
+    margin-right: 39px;
+    width: 174px;
+}
+.header .nav{
+    float: left;
+    width: 607px;
+}
+.header .nav ul{
+    list-style: none;
+}
+.header .nav ul li{
+    float: left;
+    width: 100px;
+    border-left: 1px solid #252947;
+}
+.header .nav ul li.last{
+    border-right: 1px solid #252947;
+}
+.header .nav ul li a{
+    display: block;
+    width: 100px;
+    height: 58px;
+    line-height: 58px;
+    text-align: center;
+    text-decoration: none;
+    color: #818496;
+}
+.header .nav ul li a:hover{
+    color: #E2E4ED;
+}
+.header .nav ul li.first{
+    background-color: #252947;
+    color: #E2E4ED;
+}
+.header .joinus{
+    float: left;
+    margin-left: 48px;
+    padding-top: 12px;
+}
+.header .joinus a{
+    display: block;
+    width: 98px;
+    height: 32px;
+    border: 1px solid #3ACA7A;
+    border-radius: 4px;
+    background-color: #38b774;
+    line-height: 32px;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+}
+.banner{
+    height: 465px;
+    background-image: url(images/banner.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.content{
+    background-image: url(images/indexmainbg.jpg);
+    background-repeat: no-repeat;
+    background-position: center bottom;
+}
+.content .product{
+    padding-top: 50px;
+    padding-bottom: 39px;
+    border-bottom: 1px solid #dbe1e7;
+    height: 191px;
+}
+.content .product ul{
+    list-style: none;
+}
+.content .product ul li{
+    float: left;
+    width: 218px;
+    height: 191px;
+    margin-right: 43px;
+    /* background-color: #555; */
+}
+.content .product ul li.last{
+    width: 217px;
+    margin-right: 0;
+}
+.content .product li img{
+    display: block;
+    width: 218px;
+    height: 128px;
+}
+.content .product li.last img{
+    width: 217px;
+}
+.content .product li a{
+    display: block;
+    /* width: 218px; */
+    height: 191px;
+    text-decoration: none;
+}
+.content .product a:hover{
+    background-color: #388774;
+}
+.content .product li a h5{
+    line-height: 30px;
+    color: #444866;
+    text-align: center;
+}
+.content .product li a:hover h5{
+    color: #fff;
+}
+.content .product li a p{
+    line-height: 32px;
+    color: #388774;
+    text-align: center;
+    background-image: url(images/sanjiaoxing.png);
+    background-repeat: no-repeat;
+    background-position: 150px 14px;
+}
+.content .product li a:hover p{
+    color: #fff;
+    background-image: url(images/twhite.png);
+}
+.content .info{
+    margin:52px 0;
+    overflow: hidden;
+}
+.content .info .news{
+    float: left;
+    background-image: url(images/bynewsbg.jpg);
+    width: 500px;
+
+}
+.content .info .news .more{
+    padding-top: 40px;
+    padding-left: 218px;
+    margin-bottom: 50px;
+}
+.content .info .news .more a{
+    display: block;
+    width: 64px;
+    height: 26px;
+    border: 1px solid #33b972;
+    border-radius: 5px;
+    color: #33b972;
+    text-decoration: none;
+    text-align: center;
+    font-size: 12px;
+    font-weight: bold;
+    padding-top: 4px;
+}
+.content .info .news .more a:hover{
+    color: #fff;
+    background-color: #33b972;
+}
+.content .info .news ul{
+    list-style:none;
+    padding-left: 20px;
+}
+.content .info .news ul li{
+    height: 40px;
+    width: 460px;
+    line-height: 40px;
+    border-bottom: 1px solid #dbe1e7;
+}
+.content .info .news ul li a{
+    float: left;
+    text-decoration: none;
+    color: #474a6d;
+    font-weight: bold;
+}
+.content .info .news ul li a:hover{
+    color: #33b972;
+}
+.content .info .news ul li span{
+    float: right;
+    color: #dbe1e7;
+}
+.content .info .jobs{
+    float: left;
+    background-image: url(images/byhrbg3.jpg);
+    width: 480px;
+    position: relative;
+    padding-left: 20px;
+}
+.content .info .jobs a.more{
+    position: absolute;
+    left: 218px;
+    top: 40px;
+    width: 64px;
+    height: 26px;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    color: #fff;
+    text-decoration: none;
+    text-align: center;
+    font-size: 12px;
+    font-weight: bold;
+    padding-top: 4px;
+}
+.content .info .jobs a.more:hover{
+    background-color: #fff;
+    color: #33b972;
+}
+.content .info .jobs .jobsTittle{
+    padding-top: 44px;
+    padding-left: 60px;
+    margin-bottom: 30px;
+}
+.content .info .jobs .jobsTittle h3{
+    font-family: "微软雅黑";
+    font-size: 28px;
+    font-weight: bold;
+    color: #fff;
+}
+.content .info .jobs .jobsTittle p{
+    font-size: 12px;
+    color: #fff;
+}
+.content .info .jobs h4{
+    font-family: "微软雅黑";
+    font-weight: bold;
+    color: #fff;
+}
+.content .info .jobs ul{
+    list-style: none;
+}
+.content .info .jobs ul li{
+    width: 308px;
+    height: 38px;
+    line-height: 38px;
+    border-bottom: 1px solid #6fdea3;
+}
+.content .info .jobs ul li a{
+    text-decoration: none;
+    display: block;
+    color: #fff;
+    font-weight: bold;
+}
+.foot{
+    height: 120px;
+    background-color: #191D3A;
+}
+.foot p{
+    float: left;        	
+    line-height: 60px;        	
+    color: #6C6E7E;
+    font-size: 12px;
+}
+
+.foot p.CopyrightDeclaration{
+    width: 960px;
+    text-align:center;
+}
+.foot .govIcon{
+    float:right;
+    padding-top:10px;
+}
+
+.foot .govIcon img{
+    width:40px;
+    height: 52px;  
+}
+.foot p.webmap{
+    text-align:left;
+}
+
+.foot a{
+    color: #6C6E7E;
+    text-decoration:none;
+}
+.foot a:hover{
+    color: white;
+}
